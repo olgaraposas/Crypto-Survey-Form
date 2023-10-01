@@ -1,0 +1,227 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="background-img">
+    <h1 id="title">Cryptocurrency Survey Form</h1>
+     <div class="survey-form-info">
+    <p id="description" class="description">We would like to hear your opinion on cryptocurrency. A cryptocurrency is a digital or virtual currency designed to work as a medium of exchange.It uses cryptography to secure and verify transactions as well as to control the creation of new units of a particular cryptocurrency.</p>
+      <p class="thanks">Thank you for taking the time to complete this survey.
+      </p>
+      </div>
+<form id="survey-form" class="container">
+        <div>
+        <div class="form-group">
+        <label id="name-label" for="name">name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="enter your name" required="">
+          </div>
+          <div class="form-group">
+          <label id="email-label" for="email">e-mail</label>
+          <input type="email" name="email" id="email" placeholder="enter your e-mail" required="">
+          </div>
+          <div class="form-group">
+          <label id="number-label" for="number">age (optional)</label>
+          <input type="number" name="age" min="13" max="130" id="number" placeholder="age (years)">
+</div>
+</div>
+<div class="form-group">
+<label id="profession-label" for="dropdown">which option best describes your current role?</label>
+<select id="dropdown" name="role">
+  <option disabled="" selected="" value="">select current role</option>
+ <option value="student">student</option>
+ <option value="empoyed">employed</option>
+ <option value="unempoyed">unemployed</option>
+ <option value="preferNo">prefer not to say</option>
+ <option value="other">other</option>
+ </select>
+</div>
+<div class="form-group">
+<p class="questions">How much, if at all, have you heared or read about cryptocurrencies such as Bitcoin or Ethereum?</p>
+  <label>
+<input name="crypto-info" value="alot" type="radio" class="input-radio" checked="">a lot
+</label>
+ <label>
+<input name="crypto-info" value="some" type="radio" class="input-radio">some
+</label>
+<label>
+<input name="crypto-info" value="not much" type="radio" class="input-radio">not much
+</label>
+<label>
+<input name="crypto-info" value="nothing" type="radio" class="input-radio">nothing at all
+</label>
+  </div>
+  <div class="form-group">
+    <p class="questions">Do you own cryptocurrrency?</p>
+    <label>
+<input name="ownership" value="yes" type="radio" class="input-radio" checked>yes
+</label>
+<label>
+<input name="ownership" value="no" type="radio" class="input-radio">no
+</label>
+    </div>
+    <div class="form-group">
+    <p class="questions">Do you invest or trade cryptocurrency?</p>
+    <label>
+<input name="invest-trade" value="invest" type="radio" class="input-radio" checked>invest
+</label>
+<label>
+<input name="invest-trade" value="trade" type="radio" class="input-radio">trade
+</label>
+<label>
+<input name="invest-trade" value="both" type="radio" class="input-radio">both
+</label>
+<label>
+<input name="invest-trade" value="none" type="radio" class="input-radio">none
+</label>
+    </div>
+      <div class="form-group">
+        <p class="questions">Which of the following are the reasons to own cryptocurrency?
+            <span>(check all that apply)</span></p>
+            <label>
+        <input name="reasons" value="investment" type="checkbox">as an growth investment
+        </label>
+         <label>
+        <input name="reasons" value="value" type="checkbox">as a store of value
+        </label>
+        <label>
+        <input name="reasons" value="hedge" type="checkbox">to hedge against traditional asset chrashes
+        </label>
+        <label>
+        <input name="reasons" value="regulations" type="checkbox">to avoid government regulations
+        </label>
+        <label>
+        <input name="reasons" value="blockchaintechno" type="checkbox">to support the development of blockchain technology
+        </label>
+        <label>
+        <input name="none" value="blockchaintechno" type="checkbox">none of above
+        </label>
+        </div>
+        <div>
+      <p class="questions">Any comments or suggestions?</p>
+      <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comments here..."></textarea>
+      </div>
+      <div>
+        <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+      </div>
+</form>
+</body>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+font-family:'Poppins', sans-serif;
+line-height: 1.4;
+font-size:1rem;
+color:white;}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: grey;
+    background-image: linear-gradient( 115deg, rgba(125, 122, 111, 0.8), rgba(100, 100, 108, 0.5) ), url(https://i.imgur.com/bcKNnuu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1{display:flex;
+flex-direction:column;
+align-items: center;
+flex-wrap: nowrap;
+margin:3rem 20rem 0rem 20rem;
+text-align:center;
+font-size:3rem;
+font-weight:bold;
+color:gold;}
+
+.survey-form-info{
+display:flex;
+flex-direction:column;
+align-items: center;
+flex-wrap: nowrap;
+margin:0.5rem 18rem;
+text-align:center;
+font-weight:lighter;}
+
+.thanks{
+margin: 0rem 6rem 1rem 6rem;
+font-style:italic;
+font-weight:lighter;}
+
+.container {
+    display: block;
+    background: rgb(76, 76, 68);
+    margin: 2rem 25%;
+    padding: 2.5rem 3rem;
+}
+
+.personal-info{
+margin: 0 auto 1.25rem auto;
+padding: 0.25rem;}
+
+input[type=text], input[type=number],input[type=email], select, textarea, button
+{width:100%;
+border-radius: 7px;
+margin-bottom:0.5rem;
+padding:0.8rem;
+font-size:1rem;}
+ 
+ label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0.5rem;}
+
+.form-group {margin: 0 auto 0.5rem auto;
+padding: 0.25rem;}
+
+.questions{margin-bottom:1.5rem auto;
+color:gold;}
+
+.submit-button{display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background:gold;}
+
+    @media screen and (max-width: 768px) {
+    h1 {
+        margin: 3rem 1rem 1.5rem 1rem;
+        font-size: 2rem;
+    }
+    .survey-form-info {
+        margin: 0.5rem 1rem;
+    }
+    .container {
+        margin: 2rem 7%; 
+        padding: 2.5rem 2rem
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea,
+    button {
+        padding: 0.5rem;
+        font-size: 1rem; 
+    }
+}
+
+
+** end of undefined **
+
